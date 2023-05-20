@@ -1,7 +1,16 @@
 # BIG DIAGNOZA Python
+### [Rozdział 1: Algorytmy](#rozdział-1:-algorytmy)
+### [Rozdział 2: Szyfrowanie](#rozdział-2:-szyfrowanie)
+### [Rozdział 3: Listy](rozdział-3:-listy)
 ## Rozdział 1: Algorytmy
 
-### NWD - Euklides
+### NWD
+### Biblioteka
+```python
+from math import gcd 
+gcd(x,y)
+```
+### Algorytm
 ```python
 def nwd(a,b):
     while b > 0 :
@@ -31,13 +40,13 @@ def nww(a,b):
              boolCzyPierwsza = False
      return boolCzyPierwsza
 ```
-### Ułamki Dodawanie
+### Ułamki - Dodawanie
 ```python
 def ulamkiDodawanie(a,b,c,d):
     print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)/{nww(b,d)} }")
     return (nww(b,d)//b*a)+(nww(b,d)//d*c)/nww(b,d)
 ```
-### Ułamki Odejmowanie
+### Ułamki - Odejmowanie
 ```python
 def ulamkiUdejmowanie(a,b,c,d):
     print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)/{nww(b,d)} }")
@@ -170,3 +179,28 @@ def czyAnagram(a,b):
         return False
 ```
 ## Rozdział 3: Listy
+### Usuń wszystkie liczby x z listy
+```python
+def usunLiczbe(K,x):
+    for i in range(K.count(x)):
+        K.pop(K.index(x))
+    return K
+```
+### Szukaj liczby największej w liście
+```python
+def maxWliscie(K):
+    maks = K[0]
+    for i in K:
+        if i > maks:
+            maks = i
+    return maks
+```
+### Szukaj liczby najminiejszej w liście
+```python
+def miniWliscie(K):
+    mini = maxWliscie(K)
+    for i in K:
+        if i < mini:
+            mini = i
+    return mini
+```
