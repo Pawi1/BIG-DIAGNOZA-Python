@@ -1,7 +1,28 @@
 # BIG DIAGNOZA Python
-### [Rozdział 1: Algorytmy](#rozdział-1:-algorytmy)
-### [Rozdział 2: Szyfrowanie](#rozdział-2:-szyfrowanie)
-### [Rozdział 3: Listy](rozdział-3:-listy)
+
+- [BIG DIAGNOZA Python](#big-diagnoza-python)
+  - [Rozdział 1: Algorytmy](#rozdział-1-algorytmy)
+    - [NWD](#nwd)
+    - [Biblioteka](#biblioteka)
+    - [Algorytm](#algorytm)
+    - [NWW](#nww)
+    - [Pierwsze](#pierwsze)
+    - [Ułamki - Dodawanie](#ułamki---dodawanie)
+    - [Ułamki - Odejmowanie](#ułamki---odejmowanie)
+    - [Reszta](#reszta)
+  - [Rozdział 2: Szyfrowanie](#rozdział-2-szyfrowanie)
+    - [Cesar](#cesar)
+    - [Hufman](#hufman)
+    - [RSA](#rsa)
+  - [Rozdział 3: Napisy](#rozdział-3-napisy)
+    - [Sortowanie stringa - String -\> Lista -\> String](#sortowanie-stringa---string---lista---string)
+    - [Palindrom](#palindrom)
+    - [Anagram](#anagram)
+  - [Rozdział 3: Listy](#rozdział-3-listy)
+    - [Usuń wszystkie liczby x z listy](#usuń-wszystkie-liczby-x-z-listy)
+    - [Szukaj liczby największej w liście](#szukaj-liczby-największej-w-liście)
+    - [Szukaj liczby najminiejszej w liście](#szukaj-liczby-najminiejszej-w-liście)
+
 ## Rozdział 1: Algorytmy
 
 ### NWD
