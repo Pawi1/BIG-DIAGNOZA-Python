@@ -1,6 +1,6 @@
-# BIG DIAGNOZA Python
+**BIG DIAGNOZA Python**
 
-- [BIG DIAGNOZA Python](#big-diagnoza-python)
+- [Księga 1: Skrypty, Algorytmy](#księga-1-skrypty-algorytmy)
   - [Rozdział 1: Algorytmy](#rozdział-1-algorytmy)
     - [NWD](#nwd)
     - [Biblioteka](#biblioteka)
@@ -22,7 +22,9 @@
     - [Usuń wszystkie liczby x z listy](#usuń-wszystkie-liczby-x-z-listy)
     - [Szukaj liczby największej w liście](#szukaj-liczby-największej-w-liście)
     - [Szukaj liczby najminiejszej w liście](#szukaj-liczby-najminiejszej-w-liście)
+- [Księga 2: Zadania](#księga-2-zadania)
 
+# Księga 1: Skrypty, Algorytmy 
 ## Rozdział 1: Algorytmy
 
 ### NWD
@@ -225,3 +227,4 @@ def miniWliscie(K):
             mini = i
     return mini
 ```
+# Księga 2: Zadania
