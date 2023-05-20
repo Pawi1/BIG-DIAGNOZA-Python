@@ -22,7 +22,7 @@
     - [Usuń wszystkie liczby x z listy](#usuń-wszystkie-liczby-x-z-listy)
     - [Szukaj liczby największej w liście](#szukaj-liczby-największej-w-liście)
     - [Szukaj liczby najminiejszej w liście](#szukaj-liczby-najminiejszej-w-liście)
-- [Księga 2: Zadania](#księga-2-zadania)
+- [Księga 2: Zadania](https://github.com/Pawi1/BIG-DIAGNOZA-Python/edit/main/Zadania)
 
 # Księga 1: Skrypty, Algorytmy 
 ## Rozdział 1: Algorytmy
@@ -227,4 +227,3 @@ def miniWliscie(K):
             mini = i
     return mini
 ```
-# Księga 2: Zadania
