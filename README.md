@@ -138,3 +138,35 @@ for j in szyfrogram:
     jawny += chr((ord(j)**d) % n)
 print(jawny)
 ```
+## Rozdział 3: Napisy
+### Sortowanie stringa - String -> Lista -> String
+```python
+def sortowanieStringa(s):
+    L = list(s)
+    L.sort()
+    w = "".join(L)
+    return w
+```
+### Palindrom
+```python
+def czyPalindrom(s):
+    L,R = list(s),list(s)
+    R.reverse()
+    if L == R:
+        return True
+    else:
+        return False
+```
+### Anagram
+```python
+def czyAnagram(a,b):
+    X, Y = list(a), list(b)
+    X.sort()
+    Y.sort()
+    a, b = "".join(X), "".join(Y)
+    if a == b:
+        return True
+    else:
+        return False
+```
+## Rozdział 3: Listy
