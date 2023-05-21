@@ -34,7 +34,7 @@
 ### Wstęp
 #### Zadanie 1 - Oblicz sumę liczb 3-cyfrowych
 ```python
- e1,e2,e3 = int(input("1. 1: ")),int(input("1. 2: ")),int(input("1. 3: "))
+e1,e2,e3 = int(input("1. 1: ")),int(input("1. 2: ")),int(input("1. 3: "))
 suma = e1 + e2 + e3
 print(suma) 
 # We: 10,80,12
