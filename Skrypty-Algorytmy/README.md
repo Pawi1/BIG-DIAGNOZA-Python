@@ -10,6 +10,8 @@
     - [Ułamki - Dodawanie](#ułamki---dodawanie)
     - [Ułamki - Odejmowanie](#ułamki---odejmowanie)
     - [Reszta](#reszta)
+      - [Wersja 1 - Lista](#wersja-1---lista)
+      - [Wersja 2 - Print](#wersja-2---print)
     - [Dziel i Zwyciężaj - szukanie mini i maksi z listy](#dziel-i-zwyciężaj---szukanie-mini-i-maksi-z-listy)
   - [Rozdział 2: Szyfrowanie](#rozdział-2-szyfrowanie)
     - [Cesar](#cesar)
@@ -83,28 +85,27 @@ def ulamkiUdejmowanie(a,b,c,d):
     return (nww(b,d)//b*a)+(nww(b,d)//d*c)/nww(b,d)
 ```
 ### Reszta
-Wersja 1 - Lista
+#### Wersja 1 - Lista
 ```python
-x = int(input())
-T = [50,20,10,5,2,1]
-W = []
-for i in T:
-    ilosc = x // i
-    if ilosc > 0:
-        x = x - ilosc * i
-        for j in range(ilosc):
-            W.append(i)
-print(W)
+def reszta(T,x):
+    W = []
+    for i in T:
+        ilosc = x // i
+        if ilosc > 0:
+            x = x - ilosc * i
+            for j in range(ilosc):
+                W.append(i)
+    return W
 ```
-Wersja 2
+#### Wersja 2 - Print
 ```python
-x = int(input())
-T = [50,20,10,5,2,1]
-for i in T:
-    ilosc = x // i
-    if ilosc > 0:
-        x = x - ilosc * i
-        print(f"Nominał {i} ilość {ilosc}")
+def reszta(T,x):
+    for i in T:
+        ilosc = x // i
+        if ilosc > 0:
+            x = x - ilosc * i
+            print(f"Nominał {i} ilość {ilosc}")
+    return 0
 ```
 ### Dziel i Zwyciężaj - szukanie mini i maksi z listy
 ```python

@@ -34,16 +34,15 @@ def ulamkiUdejmowanie(a,b,c,d):
 
 #* Reszta
 #? Wersja 1 - Lista
-x = int(input())
-T = [50,20,10,5,2,1]
-W = []
-for i in T:
-    ilosc = x // i
-    if ilosc > 0:
-        x = x - ilosc * i
-        for j in range(ilosc):
-            W.append(i)
-print(W)
+def reszta(T,x):
+    W = []
+    for i in T:
+        ilosc = x // i
+        if ilosc > 0:
+            x = x - ilosc * i
+            for j in range(ilosc):
+                W.append(i)
+    return W
 #? Wersja 2 - Print
 x = int(input())
 T = [50,20,10,5,2,1]
