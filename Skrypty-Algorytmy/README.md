@@ -9,10 +9,11 @@
     - [Pierwsze](#pierwsze)
     - [Ułamki - Dodawanie](#ułamki---dodawanie)
     - [Ułamki - Odejmowanie](#ułamki---odejmowanie)
-    - [Reszta](#reszta)
+    - [Zachłanne - wydawanie reszty](#zachłanne---wydawanie-reszty)
       - [Wersja 1 - Lista](#wersja-1---lista)
       - [Wersja 2 - Print](#wersja-2---print)
     - [Dziel i Zwyciężaj - szukanie mini i maksi z listy](#dziel-i-zwyciężaj---szukanie-mini-i-maksi-z-listy)
+    - [ONP](#onp)
   - [Rozdział 2: Szyfrowanie](#rozdział-2-szyfrowanie)
     - [Cesar](#cesar)
     - [Hufman](#hufman)
@@ -84,7 +85,7 @@ def ulamkiUdejmowanie(a,b,c,d):
     print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)/{nww(b,d)} }")
     return (nww(b,d)//b*a)+(nww(b,d)//d*c)/nww(b,d)
 ```
-### Reszta
+### Zachłanne - wydawanie reszty
 #### Wersja 1 - Lista
 ```python
 def reszta(T,x):
@@ -143,7 +144,36 @@ def dzielZwyciężaj(T):
 
     return [mini, maxi]
 ```
-
+### ONP
+```python
+def onp(E):
+    R = []
+    for i in E:
+        if i.isdigit():
+            R.append(i)
+        else:
+            if i == "+":
+                x = int(R[len(R)-2]) + int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "-":
+                x = int(R[len(R)-2]) - int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "*":
+                x = int(R[len(R)-2]) * int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "/":
+                x = int(R[len(R)-2]) // int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+    return R[0]
+```
 ## Rozdział 2: Szyfrowanie
 ### Cesar
 ```python

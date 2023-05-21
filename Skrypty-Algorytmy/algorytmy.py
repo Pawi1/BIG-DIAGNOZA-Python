@@ -85,3 +85,31 @@ def dzielZwyciężaj(T):
             maxi=T[n-1]
 
     return [mini, maxi]
+#* ONP - liczenie
+def onp(E):
+    R = []
+    for i in E:
+        if i.isdigit():
+            R.append(i)
+        else:
+            if i == "+":
+                x = int(R[len(R)-2]) + int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "-":
+                x = int(R[len(R)-2]) - int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "*":
+                x = int(R[len(R)-2]) * int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+            if i == "/":
+                x = int(R[len(R)-2]) // int(R[len(R)-1])
+                R.pop()
+                R.pop()
+                R.append(x)
+    return R[0]
