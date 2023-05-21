@@ -7,8 +7,6 @@
       - [Algorytm](#algorytm)
     - [NWW](#nww)
     - [Pierwsze](#pierwsze)
-    - [Ułamki - Dodawanie](#ułamki---dodawanie)
-    - [Ułamki - Odejmowanie](#ułamki---odejmowanie)
     - [Zachłanne - wydawanie reszty](#zachłanne---wydawanie-reszty)
       - [Wersja 1 - Lista](#wersja-1---lista)
       - [Wersja 2 - Print](#wersja-2---print)
@@ -22,6 +20,7 @@
     - [Sortowanie stringa - String -\> Lista -\> String](#sortowanie-stringa---string---lista---string)
     - [Palindrom](#palindrom)
     - [Anagram](#anagram)
+    - [Ciąg Malejący](#ciąg-malejący)
   - [Rozdział 3: Listy](#rozdział-3-listy)
     - [Usuń wszystkie liczby x z listy](#usuń-wszystkie-liczby-x-z-listy)
     - [Szukaj liczby największej w liście](#szukaj-liczby-największej-w-liście)
@@ -34,6 +33,11 @@
     - [Sortowanie bąbelkowe](#sortowanie-bąbelkowe)
     - [Sortowanie poprzez zliczanie](#sortowanie-poprzez-zliczanie)
     - [Sortowanie poprzez wybieranie](#sortowanie-poprzez-wybieranie)
+  - [Rozdział 5: Ułamki](#rozdział-5-ułamki)
+    - [Dodawanie](#dodawanie)
+    - [Odejmowanie](#odejmowanie)
+    - [Liczba Mieszana](#liczba-mieszana)
+    - [Skracanie](#skracanie)
 - [Księga 2: Zadania](#księga-2-zadania)
 # Księga 1: Skrypty, Algorytmy 
 ## Rozdział 1: Algorytmy
@@ -73,18 +77,7 @@ def nww(a,b):
              boolCzyPierwsza = False
      return boolCzyPierwsza
 ```
-### Ułamki - Dodawanie
-```python
-def ulamkiDodawanie(a,b,c,d):
-    print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)}/{nww(b,d)} ")
-    return str((nww(b,d)//b*a)+(nww(b,d)//d*c))+"/"+ str((nww(b,d)))
-```
-### Ułamki - Odejmowanie
-```python
-def ulamkiUdejmowanie(a,b,c,d):
-    print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)}/{nww(b,d)} ")
-    return str((nww(b,d)//b*a)-(nww(b,d)//d*c))+"/"+ str((nww(b,d)))
-```
+
 ### Zachłanne - wydawanie reszty
 #### Wersja 1 - Lista
 ```python
@@ -275,6 +268,16 @@ def czyAnagram(a,b):
     else:
         return False
 ```
+### Ciąg Malejący
+```python
+def ciagMalejacy(wejscie):
+    alfabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","W","Y","Z"]
+    flaga = True
+    for i in range(len(wejscie)-1):
+        if alfabet.index(wejscie[i]) < alfabet.index(wejscie[i+1]):
+            flaga = False
+    return flaga
+```
 ## Rozdział 3: Listy
 ### Usuń wszystkie liczby x z listy
 ```python
@@ -391,5 +394,35 @@ def selectionSort(T):
             if T[j] < T[k]:
                 k = j
         T[k], T[i] = T[i], T[k]
+```
+## Rozdział 5: Ułamki
+### Dodawanie
+```python
+def ulamkiDodawanie(a,b,c,d):
+    print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)}/{nww(b,d)} ")
+    return str((nww(b,d)//b*a)+(nww(b,d)//d*c))+"/"+ str((nww(b,d)))
+```
+### Odejmowanie
+```python
+def ulamkiUdejmowanie(a,b,c,d):
+    print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)}/{nww(b,d)} ")
+    return str((nww(b,d)//b*a)-(nww(b,d)//d*c))+"/"+ str((nww(b,d)))
+```
+### Liczba Mieszana
+```python
+def ulamkiMieszane(a_przez_b):
+    a = int(a_przez_b[0])
+    b = int(a_przez_b[2])
+    if a%b != 0:
+        return str(a//b) +" "+ str(a%b)+"/"+str(b) 
+    else: 
+        return str(a)+"/"+str(b)
+```
+### Skracanie
+```python
+def ulamkiSkracanie(a_przez_b):
+    a = int(a_przez_b[0])
+    b = int(a_przez_b[2])
+    return str(a//nwd(a,b))+"/"+str(b//nwd(a,b))
 ```
 # [Księga 2: Zadania](https://github.com/Pawi1/BIG-DIAGNOZA-Python/edit/main/Zadania)

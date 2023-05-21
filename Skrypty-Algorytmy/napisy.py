@@ -23,3 +23,12 @@ def czyAnagram(a,b):
         return True
     else:
         return False
+
+#* Ciąg Malejący
+def ciagMalejacy(wejscie):
+    alfabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","W","Y","Z"]
+    flaga = True
+    for i in range(len(wejscie)-1):
+        if alfabet.index(wejscie[i]) < alfabet.index(wejscie[i+1]):
+            flaga = False
+    return flaga

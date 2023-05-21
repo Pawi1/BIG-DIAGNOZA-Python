@@ -27,7 +27,7 @@ for i in zad3_A:
 print(maks)
 
 #* 4. Suma cyfr w dowolnej liczbie
-# zad4_e = int(input("4.: "))
+# zad4_e = int(input("4. Podaj dowolną cyfre: "))
 zad4_e = 523
 zad4_sum = 0
 for i in str(zad4_e):
@@ -35,7 +35,7 @@ for i in str(zad4_e):
 print(zad4_sum)
 
 #* 5. Znajdź najmniejszą cyfrę we wpisanej przez usera liczbie 3-cyfrowej
-# zad5_e = int(input("5.: "))
+# zad5_e = int(input("5. Podaj 3-cyfrową liczbe: "))
 zad5_e = 523
 mini = 10
 for i in str(zad5_e):
@@ -47,7 +47,7 @@ print(mini)
 #! Algorytmy
 
 #* 1. Czy liczba usera jest pierwsza
-# n = int(input("1.: "))
+# n = int(input("1. Podaj liczbe: "))
 n = 420
 boolCzyPierwsza = True
 for i in range(2,n):
@@ -56,7 +56,7 @@ for i in range(2,n):
 print(boolCzyPierwsza)
 
 #* 2. Czy liczba usera jest złożona
-# n = int(input("2.: "))
+# n = int(input("2. Podaj liczbe: "))
 n = 420
 boolCzyZlozona = False
 for i in range(2,n):
@@ -65,7 +65,7 @@ for i in range(2,n):
 print(boolCzyZlozona)
 
 #* 3. Czy liczba usera jest względnie pierwsza do 24
-# n = int(input("3.: "))
+# n = int(input("3. Podaj liczbe: "))
 n = 420
 def nwd(a,b):
     while b > 0 :
@@ -96,7 +96,6 @@ def nww(a,b):
     return (iloczyn//a)
 def ulamkiDodawanie(a,b,c,d,bo):
     if bo == True:print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)}/{nww(b,d)} = {((nww(b,d)//b*a)+(nww(b,d)//d*c))/(nww(b,d))} ")
-    # return ((nww(b,d)//b*a)+(nww(b,d)//d*c))/(nww(b,d))
     return str((nww(b,d)//b*a)+(nww(b,d)//d*c))+"/"+ str((nww(b,d)))
 
 
@@ -129,7 +128,7 @@ print(nww(a,b))
 #! Napisy
 
 #* 1. Znajdź ilość litrer C we wpisanym napisie
-# napis = input("1.: ")
+# napis = input("1. Podaj napis: ")
 napis = "CECYLIA"
 ilosc = 0
 for i in range(len(napis)):
@@ -137,4 +136,23 @@ for i in range(len(napis)):
         ilosc += 1
 print(ilosc)
 
-#* 2.
+#* 2. Sprawdź czy literki są w ciągu nierosnącym np. ZOO
+# wejscie = input("1. Podaj napis: ")
+wejscie = "ZOO"
+def ciagMalejaccy(wejscie):
+    alfabet=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","W","Y","Z"]
+    flaga = True
+    for i in range(len(wejscie)-1):
+        if alfabet.index(wejscie[i]) < alfabet.index(wejscie[i+1]):
+            flaga = False
+    return flaga
+print(ciagMalejaccy(wejscie))
+
+#* 3. Najdłuższy wyraz
+napis1= "LOLEK"
+napis2= "BOLEK"
+napis3= "TROLEK"
+# napis1,napis2,napis3 = input("3. 1: "),input("3. 2: "),input("3. 3: ")
+if napis1 > napis2 and napis1 > napis3: print("1")
+if napis2 > napis1 and napis2 > napis3: print("2")
+if napis3 > napis2 and napis3 > napis1: print("3")
