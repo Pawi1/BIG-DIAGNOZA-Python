@@ -25,11 +25,11 @@ def czyPierwsza(n):
 #* Ułamki
 # Dodawanie
 def ulamkiDodawanie(a,b,c,d):
-    print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)/{nww(b,d)} }")
+    print(f"{a}/{b} + {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} + {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)+(nww(b,d)//d*c)}/{nww(b,d)} ")
     return (nww(b,d)//b*a)+(nww(b,d)//d*c)/nww(b,d)
 # Odejmowanie
 def ulamkiUdejmowanie(a,b,c,d):
-    print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)/{nww(b,d)} }")
+    print(f"{a}/{b} - {c}/{d} = {nww(b,d)//b*a}/{nww(b,d)} - {nww(b,d)//d*c}/{nww(b,d)} = {(nww(b,d)//b*a)-(nww(b,d)//d*c)}/{nww(b,d)} ")
     return (nww(b,d)//b*a)+(nww(b,d)//d*c)/nww(b,d)
 
 #* Reszta
